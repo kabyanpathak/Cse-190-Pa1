@@ -51,7 +51,7 @@ struct DumpResponse {
 async fn main() {
     let pool = sqlx::sqlite::SqlitePoolOptions::new()
         .max_connections(10)
-        .connect("sqlite::boogle.db?mode=rwc")
+        .connect("sqlite:boogle.db?mode=rwc")
         .await
         .expect("Could not connect to database");
 
