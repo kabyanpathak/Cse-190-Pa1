@@ -1,0 +1,19 @@
+CREATE TABLE CLIENT_TABLE (
+    uuid TEXT PRIMARY KEY,
+    first_seen TEXT,
+    last_seen TEXT,
+    latest_ip TEXT
+);
+
+CREATE TABLE SEARCH_TABLE (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    query TEXT,
+    ts TEXT,
+    uuid TEXT
+);
+
+CREATE TABLE IPS (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ip TEXT,
+    uuid TEXT
+);
